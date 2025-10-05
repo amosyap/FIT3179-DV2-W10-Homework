@@ -16,7 +16,7 @@
     "layer": [
         {
         "data": {
-            "url": "https://raw.githubusercontent.com/amosyap/FIt3179-W9Homework/refs/heads/main/ne_10m.topojson",
+            "url": "https://raw.githubusercontent.com/amosyap/FIT3179-DV2-W10-Homework/refs/heads/main/js/ne_10m.topojson",
             "format": {
                 "type": "topojson",
                 "feature": "ne_10m_admin_1_states_provinces"
@@ -30,7 +30,7 @@
         },
         {
         "data": {
-            "url": "https://raw.githubusercontent.com/amosyap/FIt3179-W9Homework/refs/heads/main/DV2_Dataset.csv"
+            "url": "https://raw.githubusercontent.com/amosyap/FIT3179-DV2-W10-Homework/refs/heads/main/data/DV2_Dataset.csv"
         },
         "mark": {
             "type": "circle",
@@ -94,7 +94,7 @@
         },
         {
         "data": {
-            "url": "https://raw.githubusercontent.com/amosyap/FIt3179-W9Homework/refs/heads/main/DV2_Dataset.csv",
+            "url": "https://raw.githubusercontent.com/amosyap/FIT3179-DV2-W10-Homework/refs/heads/main/data/DV2_Dataset.csv",
             "format": {"type": "csv"}
         },
         "mark": {
