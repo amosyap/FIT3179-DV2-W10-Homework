@@ -9,27 +9,42 @@
     
     <title>Malaysia Vehicle Registration & Environmental Complaints Map</title>
 </head>
+
 <body>
-  
+
     <div class="header">
-        <h1>Malaysia: Vehicle Impact on Environmental Quality (2019)</h1>
+        <h1>Malaysia: Vehicle Registration & Environmental Complaints</h1>
         <p>Comprehensive analysis of vehicle registration patterns, environmental compliance,</p>
         <p>and sustainable mobility indicators across Malaysian states.</p>
     </div>
 
-    <div id="symbol_map"></div>
+    <div class="container">
+        <div class="viz-card" aria-label="Proportional symbol map">
+            <div id="symbol_map"></div>
+        </div>
+
+        <div class="viz-card" aria-label="Average complaints bar chart">
+            <div id="bar_chart"></div>
+        </div>
+    </div>
 
     <div class="footer">
         <p><strong>Data Sources:</strong> Ministry of Transport Malaysia, Department of Environment Malaysia</p>
         <p><strong>Note:</strong> Data from 2019. Circle size represents registered vehicles, color represents complaint numbers.</p>
     </div>
 
-<script type="text/javascript">
-    var spec2 = "js/symbol_map.vg.json";
-    vegaEmbed('#symbol_map', spec2).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-</script>
+    <script type="text/javascript">
+        var spec1 = "js/symbol_map.vg.json";
+        vegaEmbed('#symbol_map', spec1).then(function(result1) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var spec2 = "js/bar_chart.vl.json";
+        vegaEmbed('#bar_chart', spec2).then(function(result2) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+    </script>
 
 </body>
 </html>
