@@ -29,6 +29,10 @@
         }
         },
         {
+            "data": {"graticule": true},
+            "mark": {"type": "geoshape", "fill": null, "stroke": "#ddd"}
+        },
+        {
         "data": {
             "url": "https://raw.githubusercontent.com/amosyap/FIT3179-DV2-W10-Homework/refs/heads/main/data/DV2_Dataset.csv"
         },
