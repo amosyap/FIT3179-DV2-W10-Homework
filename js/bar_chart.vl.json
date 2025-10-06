@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Horizontal bar chart showing mean number of complaints per state with annotated national average line",
+  "data": {
+    "url": "https://raw.githubusercontent.com/amosyap/FIT3179-DV2-W10-Homework/refs/heads/main/data/DV2_Dataset.csv"
+  },
+  "title": {
+    "text": "Average Number of Complaints by State in Malaysia",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "anchor": "middle"
+  },
+  "width": 400,
+  "height": 300,
+  "params": [
+    {
+      "name": "region_selection",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All",
+          "W.P. Persekutuan",
+          "West Malaysia",
+          "East Malaysia"
+        ],
+        "labels": ["All", "W.P. Persekutuan", "West Malaysia", "East Malaysia"],
+        "name": "Select Region: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "datum.state == 'W.P. Kuala Lumpur' || datum.state == 'W.P. Putrajaya' || datum.state == 'W.P. Labuan' ? 'W.P. Persekutuan' : (datum.state == 'Sabah' || datum.state == 'Sarawak' ? 'East Malaysia' : 'West Malaysia')",
+      "as": "region"
+    },
+    {"filter": "region_selection == 'All' || datum.region == region_selection"}
+  ],
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "sort": "-x",
+          "title": "State"
+        },
+        "x": {
+          "aggregate": "mean",
+          "field": "number_of_complaints",
+          "type": "quantitative",
+          "title": "Number of Complaints"
+        },
+        "color": {"field": "state", "type": "nominal", "legend": null},
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {
+            "aggregate": "mean",
+            "field": "number_of_complaints",
+            "type": "quantitative",
+            "title": "Number of Complaints"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "rule", "color": "firebrick", "size": 2},
+      "encoding": {
+        "x": {
+          "aggregate": "mean",
+          "field": "number_of_complaints",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "aggregate": "mean",
+            "field": "number_of_complaints",
+            "type": "quantitative",
+            "title": "Average Number of Complaints"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "dy": 270,
+        "color": "firebrick",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "aggregate": "mean",
+          "field": "number_of_complaints",
+          "type": "quantitative"
+        },
+        "y": {"value": 0},
+        "text": {"value": "Complaints Avg."}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"labelFontSize": 12, "titleFontSize": 14}
+  }
+}
