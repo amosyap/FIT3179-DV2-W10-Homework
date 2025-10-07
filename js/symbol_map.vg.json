@@ -29,7 +29,7 @@
         }
         },
         {
-            "data": {"graticule": true},
+            "data": {"graticule": {"step": [1, 1]}},
             "mark": {"type": "geoshape", "fill": null, "stroke": "#ddd"}
         },
         {
