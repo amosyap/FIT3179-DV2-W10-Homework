@@ -10,7 +10,7 @@
     "fontWeight": "bold",
     "anchor": "middle"
   },
-  "width": 500,
+  "width": 280,
   "height": 300,
   "padding": {
     "left": 10,
@@ -58,7 +58,11 @@
           "type": "quantitative",
           "title": "Number of Complaints"
         },
-        "color": {"field": "state", "type": "nominal", "legend": null},
+        "color": {"field": "state", "type": "nominal", "legend": null, "scale": {
+          "range": ["#1f77b4","#ff7f0e","#d62728","#9467bd","#8c564b","#e377c2","#7f7f7f","#17becf",
+                    "#ff9896","#c5b0d5","#c49c94","#f7b6d2","#9edae5","#ffbb78","#a55194","#393b79"]
+          }
+        },
         "tooltip": [
           {"field": "state", "type": "nominal", "title": "State"},
           {

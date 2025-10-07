@@ -13,25 +13,28 @@
 <body>
 
     <div class="header">
-        <h1>Malaysia: Vehicle Registration & Environmental Complaints</h1>
-        <p>Comprehensive analysis of vehicle registration patterns, environmental compliance,</p>
-        <p>and sustainable mobility indicators across Malaysian states.</p>
+        <h1>A Data-Driven Overview of Complaints, Air Pollution,</h1>
+        <h1>and Vehicle Numbers in Malaysia</h1>
     </div>
 
     <div class="container">
-        <div class="viz-card" aria-label="Proportional symbol map">
-            <div id="symbol_map"></div>
-            <div class="legend-textbox">
+        <div id="symbol_map"></div>
+        <div class="map-textbox">
+            <p>
+            The visualization shows that Selangor and Johor lead in both vehicle registration and environmental complaints in 2019. This correlation highlights the likely environmental pressure on highly urbanized states, where dense populations and high vehicle usage contribute significantly to environmental issues.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="viz-card" aria-label="Average complaints bar chart">
+            <div id="bar_chart"></div>
+            <div class="bar-textbox">
                 <p>
-                The visualization shows that Selangor and Johor lead in both vehicle registration and environmental complaints in 2019. This correlation highlights the likely environmental pressure on highly urbanized states, where dense populations and high vehicle usage contribute significantly to environmental issues.
+                The bar chart reveals that Selangor, Johor, and Kuala Lumpur have the highest average complaints per 1,000 vehicles, indicating significant environmental challenges in these urbanized states. In contrast, states like Perlis and Kelantan show lower complaint rates, suggesting better environmental compliance or less vehicle-related pollution.
                 </p>
             </div>
         </div>
-
-        <div class="viz-card" aria-label="Average complaints bar chart">
-            <div id="bar_chart"></div>
-        </div>
-    </div>
 
     <div class="footer">
         <p><strong>Data Sources:</strong> Ministry of Transport Malaysia, Department of Environment Malaysia</p>
