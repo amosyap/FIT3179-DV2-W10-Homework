@@ -107,8 +107,8 @@
             {"field": "registered_motor_cars", "type": "quantitative", "title": "Registered Vehicles", "format": ","},
             {"field": "number_of_complaints", "type": "quantitative", "title": "Environmental Complaints"},
             {"field": "state_population", "type": "quantitative", "title": "Population", "format": ","},
-            {"field": "complaints_per_10k_residents", "type": "quantitative", "title": "Complaints per 10,000 pop.", "format": ".1f"},
-            {"field": "vehicles_per_1k_residents", "type": "quantitative", "title": "Vehicles per 1,000 pop.", "format": ".1f"}
+            {"field": "complaints_per_10k_residents", "type": "quantitative", "title": "Complaints per 10,000 population", "format": ".1f"},
+            {"field": "vehicles_per_1k_residents", "type": "quantitative", "title": "Vehicles per 1,000 population", "format": ".1f"}
             ]
         }
         },
