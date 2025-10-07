@@ -37,6 +37,19 @@ body {
     padding-top: 20px;
 }
 
+.legend-textbox {
+    position: absolute;
+    top: 300px;      /* Adjust as needed */
+    left: 660px;   /* Adjust to place next to legend */
+    width: 320px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 4px 10px;  /* ↓ Reduced top/bottom, kept left/right */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    font-size: 13px;
+}
+
 .footer {
     text-align: center;
     margin-top: 10px;
