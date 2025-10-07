@@ -8,7 +8,7 @@
     "text": "Total Number of Complaints by State in Malaysia",
     "fontSize": 18,
     "fontWeight": "bold",
-    "anchor": "middle"
+    "anchor": "start"
   },
   "width": 280,
   "height": 300,
